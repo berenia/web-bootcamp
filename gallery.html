@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+      .container {
+        width: 100vw;
+        height: auto;
+        background-color: rgb(255, 212, 212);
+        padding: 20px;
+      }
+      #francis-head {
+        background-color: rgb(240, 255, 240);
+        width: 80%;
+        padding: 20px;
+        margin-bottom: 50px;
+      }
+      #francis-child {
+        background-color: rgb(255, 255, 255);
+        width: 80%;
+        padding: 50px;
+      }
+      #my-image {
+        width: 400px;
+        height: 300px;
+        border: 10px dashed rgb(61, 40, 2);
+        border-radius: 20px;
+      }
+
+      .table-wrapper {
+        padding: 100px;
+        background-color: rgb(209, 235, 253);
+      }
+
+      .details-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .details-table,
+      th,
+      td {
+        border: none;
+      }
+      .details-table th {
+        background-color: rgb(26, 95, 255);
+        color: white;
+      }
+
+      .details-table th,
+      td {
+        padding: 10px;
+        text-align: center;
+      }
+      .details-table td:nth-child(1) {
+        padding: 10px;
+        text-align: left;
+      }
+
+      .details-table tr:nth-child(odd) {
+        background-color: rgb(181, 221, 255);
+      }
+      .details-table tr:nth-child(even) {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .form-wrapper {
+        width: 500px;
+        padding: 50px;
+        background-color: rgb(206, 237, 251);
+      }
+
+      input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid rgb(67, 116, 252);
+        outline: none;
+        background-color: #fff;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        border-radius: 5px;
+      }
+
+      label {
+        padding: 10px;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      progress {
+        width: 95%;
+      }
+
+      h2 {
+        background-color: rgb(1, 92, 172);
+        color: #fff;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="francis-head">
+        <div id="francis-child">
+          <img src="assets/images/bg-3.jpg" id="my-image" />
+        </div>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="details-table">
+          <caption>
+            Class detail
+          </caption>
+          <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>John Mark</td>
+            <td>Male</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Wood Mark</td>
+            <td>Male</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Stone Mark</td>
+            <td>Male</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Sky Mark</td>
+            <td>Male</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Joy Wood</td>
+            <td>Male</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>Mabel James</td>
+            <td>Male</td>
+            <td>12</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="form-wrapper">
+        <h2>Sign up form</h2>
+        <form>
+           <fieldset>
+                <legend>Personal INfo</legend>
+                <label for="username"> Full name</label>
+                <input type="text" name="first-name" id="username" placeholder="your full name here" />
+    
+               
+                <label for="age"> Age </label>
+                <input type="number" name="age" id="age" min="18" max="50"  placeholder="your age" />
+    
+                <label for="date"> DOB </label>
+                <input type="date" name="date" id="date"  />
+                
+                <label for="age"> DOB </label>
+                <input type="time" name="date" id="date"  />
+           </fieldset>
+
+            <fieldset>
+                <legend>Contact Address</legend>
+                <label for="email"> Email</label>
+                <input type="email" name="email" id="email" placeholder="email" />
+    
+                <label for="phone"> Phone Number</label>
+                <input type="tel" name="mobile" id="phone" placeholder="+234 90652487656" />
+    
+            </fieldset>
+
+            <label for="range"> Range </label>
+            <input type="range" name="range" id="range" min="0" max="10"  />
+
+            <label for="radio"> Radio Button input </label>
+            <input type="radio" name="radio" id="radio" min="0" max="10"  />
+
+            <label for="male"> Male </label>
+            <input type="checkbox" name="checkbox" id="male" min="0" max="10"  />
+            <label for="female"> Female </label>
+            <input type="checkbox" name="checkbox" id="female" min="0" max="10"  />
+            
+            <div style="background-color: rgb(244, 208, 162);">
+                <label for="male"> Html</label>
+                <progress max="50" value="40"> 80%</progress>
+
+                <label for="male"> CSS</label>
+                <progress max="50" value="30"> 60%</progress>
+
+                <label for="male"> PHP </label>
+                <progress max="50" value="10"> 20%</progress>
+            </div>
+            
+
+
+
+            <textarea name="" id="" cols="30" rows="5"></textarea>
+
+            <input type="submit" name="submit" value="submit">
+        </form>
+      </div>
+    </div>
+
+    <!-- Javascript session -->
+
+    <script src=""></script>
+
+    <script>
+      
+    </script>
+
+  </body>
+</html>

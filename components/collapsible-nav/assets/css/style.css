@@ -1,0 +1,195 @@
+:root {
+    --main-color: #009900;
+    --secondary-bg-color: #aaffcc;
+    --text-color-primary: #333;
+    --text-color-secondary: #fff;
+    --text-color-tertiary: #555;
+    --button-padding: 10px 30px;
+    --main-border-radius: 5px;
+    --header-bg-color: #020e02;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header-wrapper {
+    background-color: var(--header-bg-color);
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-wrapper .navbar {
+    width: 100%;
+    height: 67px;
+    background-color: var(--main-color);
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.header-wrapper .navbar .logo{
+    float: left;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    color: var(--text-color-secondary);
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.header-wrapper .navbar .links ul {
+    float: right;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.header-wrapper .navbar .links ul li {
+    float: left;
+    list-style-type: none;
+    padding: 8px 15px;
+    margin-right: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    color: var(--text-color-secondary);
+}
+.header-wrapper .navbar .links ul .active {
+    background-color: var(--secondary-bg-color);
+    color: #020e02;
+    border-radius: var(--main-border-radius);
+}
+.header-wrapper .navbar .links ul li:hover {
+    border-bottom: 3px solid #ffffff;
+}
+.header-wrapper .navbar .links ul li a {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 600; 
+    text-decoration: none;
+}
+
+.header-wrapper .navbar .btn-signup {
+    float: right;
+    padding: var(--button-padding);
+    background-color: var(--text-color-secondary);
+    border: 2px solid var(--main-color);
+    border-radius: var(--main-border-radius);
+    margin-left: 100px;
+    box-sizing: border-box;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header-wrapper .navbar .btn-signup:hover {
+    background-color: #ffaa00;
+    color: #fff;
+}
+
+.mobile-navbar {
+    float: right;
+    display: none;
+}
+
+.mobile-navbar .menu-icon {
+    font-size: 24px;
+    padding: 10px;
+    color: var(--text-color-secondary);
+    box-sizing: border-box;
+}
+.mobile-navbar .menu-icon {
+    z-index: 5000;
+} 
+
+.mobile-navbar .mobile-links {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: rgb(49, 50, 49);
+    color: var(--text-color-secondary);
+    animation: slide-right 0.4s ease-in-out forwards;
+    padding-top: 30px;
+}
+
+    @keyframes slide-right {
+        0% {
+           
+        }
+        100% {
+            width: 300px;
+        }
+    }
+
+.mobile-navbar .mobile-links ul {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+    animation: fade-in 0.4s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+    }
+}
+
+.mobile-navbar .mobile-links ul li {
+    width: 100%;
+   list-style-type: none;
+   background-color: inherit;
+   color: var(--secondary-bg-color);
+   border-bottom: 1px solid var(--secondary-bg-color);
+   padding: 10px;
+   box-sizing: border-box;
+}
+.mobile-navbar .mobile-links ul li:hover {
+    background-color: var(--secondary-bg-color);
+    color: #020e02;
+}
+
+.mobile-navbar .mobile-links ul li a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .header-wrapper .navbar {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .header-wrapper .navbar .links {
+        display: none;
+    }
+    .header-wrapper .navbar .btn-signup {
+        display: none;
+    }
+
+    .mobile-navbar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .header-wrapper .navbar .btn-signup {
+        margin-left: 20px;
+    }
+
+    .header-wrapper .navbar .links ul li {
+        margin-right: 5px;
+    }
+}

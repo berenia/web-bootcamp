@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+  </head>
+  <body>
+    <div style="width: 65%; background-color: rgb(221, 230, 238); float: left">
+      <section
+        style="
+          background-color: lightblue;
+          padding: 20px;
+          width: 80%;
+          height: 250px;
+        "
+      >
+        <h1>About Us</h1>
+
+        <button id="1" onclick="tellMeSomething('1')"> click me</button>
+        <button id="2" onclick="tellMeSomething('2')"> click me</button>
+        <button id="3" onclick="tellMeSomething('3')"> click me</button>
+        <button id="4" onclick="tellMeSomething('4')"> click me</button>
+
+        <a href="index.html"> Go back to home page </a>
+        <div
+          style="
+            background-color: white;
+            padding: 20px;
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            padding: 15px;
+            float: right;
+            margin-right: 100px;
+          "
+        >
+          <h2>Our core value</h2>
+          <p>We are honest people. We keep to time and we deliver the best</p>
+        </div>
+        <div
+          style="
+            background-color: white;
+            padding: 20px;
+            width: 200px;
+            height: 100px;
+            margin: 15px;
+            padding: 15px;
+            float: left;
+            margin-left: 100px;
+          "
+        >
+          <h2>Where we start</h2>
+          <p>We start where we start. Before earth was form.</p>
+        </div>
+      </section>
+
+      <section style="background-color: silver">
+        <h1>What we do</h1>
+        <div
+          style="
+            background-color: aquamarine;
+            width: 150px;
+            height: 100px;
+            margin: 15px;
+            padding: 15px;
+          "
+        >
+          We train people
+        </div>
+
+        <div
+          style="
+            background-color: aquamarine;
+            width: 150px;
+            height: 100px;
+            margin: 15px;
+            padding: 15px;
+          "
+        >
+          We coach people
+        </div>
+        <div
+          style="
+            background-color: aquamarine;
+            width: 150px;
+            height: 100px;
+            margin: 15px;
+            padding: 15px;
+          "
+        >
+          We teach people
+        </div>
+      </section>
+
+      <section style="background-color: beige">
+        <h1>Testimonial</h1>
+      </section>
+    </div>
+
+    <aside
+    id="sidebar"
+      style="
+        float: right;
+        background-color: lightgreen;
+        padding: 10px;
+        width: 30%;
+      "
+    >
+      <div style="background-color: white">
+        <h1 style="background-color: chocolate; color: white">
+          This is my story
+        </h1>
+
+        <p style="background-color: aliceblue">
+          How Do I <strong style="color: red"> Love </strong> Thee?," by
+          <b style="color: blue"> Elizabeth Barrett </b> Browning. ... "When You
+          Are <br />
+          Old," by <i> William Butler </i> Yeats. ... "Sonnet 116," by ,
+          <em> William Shakespeare. </em> <br />
+          ...
+          <span style="background-color: black; color: orange"
+            >"undefined"
+          </span>
+          by e.e. cummings. ... "Love Sonnet XI," by Pablo Neruda <br />
+        </p>
+
+        <h3>This is Order list</h3>
+        <ol type="1">
+          <li>Apple</li>
+          <li>Orange</li>
+          <li>Mango</li>
+        </ol>
+        <span>And we have other fruits</span>
+        <ol type="1" start="4">
+          <li>Pear</li>
+          <li>Pineapple</li>
+          <li>Cherry</li>
+        </ol>
+
+        <br />
+        <br />
+      </div>
+    </aside>
+
+
+<script src="assets/js/myjavascript.js"></script>
+
+<script>
+
+// for(let i = 10 ; i >= 0; i -= 2 ){
+//   console.log("value of i is : " + i);
+// }
+
+
+
+// do {
+//   console.log("value of i is : " + i);
+//   i++;
+// } while (i < 10);
+
+    //   var students = [
+    //   { name: "John Doe", studentAge: 45, gender: "male"},
+    //   { name: "Mary Curie", studentAge: 45, gender: "female"},
+    //   { name: "Joy Mark", studentAge: 45, gender: "female"},
+    //   { name: "Frank Joy", studentAge: 45, gender: "male"},
+    //   { name: "Mabel Peter", studentAge: 45, gender: "female"}
+    //   ];
+    //   // index 
+    
+    // // Object 
+    var stud = { name: "Adeyemi Fatimah", studentAge: 256, gender: "female"};
+    
+    // students.push(stud);
+    
+    // for (let index = 0; index < students.length; index++) {
+    //   console.log(students[index].name, students[index].studentAge, students[index].gender);
+    // }
+
+  function myFunction()   {
+    alert("This is a house");
+  }
+
+  /**
+   * This function only display the name and the level of a student
+   * @param studentName - string
+   * @param level - string
+   */
+  function myStudent(studentName, level)   {
+    console.log("This is the students data", studentName, "level ", level);
+  }
+
+  function isVarArray(varName){
+    if (Array.isArray(varName)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  function tellMeSomething(num = "0") {
+    let buttonId = document.getElementById(num);
+    if (buttonId.style.background !== "red") {
+      buttonId.style.background = "red";
+      buttonId.style.padding = "20px";
+      buttonId.style.border = "none";
+    }
+    else {
+      buttonId.style.background = "blue";
+      buttonId.style.padding = "0px";
+      buttonId.style.border = "1px solid #009900";
+    }
+
+    if (num == 4) {
+      let sidebar = document.getElementById("sidebar");
+      sidebar.style.display = "none";
+    }
+    else {
+      sidebar.style.display = "block";
+    }
+
+  }
+
+
+
+</script>
+  </body>
+</html>

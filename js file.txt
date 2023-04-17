@@ -1,0 +1,29 @@
+What is Javascript
+
+Javascript can simply be put as web programming language. And the most popular programming language.
+
+How to link use Javascript in HTML
+1. Internal script 
+2. External script linking
+
+How to output data in Javascript
+1. document.write()
+2. alert()
+3. console.log()
+
+How to get response from User
+1. prompt(a, b) 
+2. confirm(a)
+
+Javascript Basics
+1. Javascript statement and variable
+2. Javascript data type
+3. Javascript control structure or contidition statement
+4. Javascript iteration or loop statement
+5. Array
+6. Object
+7. Function
+8. Arrow function
+9. HTML DOM Manipulation
+10. Component design with JS, CSS and HTML
+

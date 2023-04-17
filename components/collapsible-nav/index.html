@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navigation bar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- responsive navigation bar -->
+    <section class="header-wrapper">
+        <!-- navbar using css float property -->
+        <div class="navbar">
+            <div class="logo">Company Name</div>
+            <div class="btn-signup">Sign-up</div>
+            <div class="links">
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+
+            <div class="mobile-navbar">
+                <div class="menu-icon" id="menu" onclick="toggleMenu()">
+                    <i class="fa fa-bars"></i>
+                </div>
+                <div class="mobile-links" id="mobile-link">
+                    <ul>
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- navbar using css flex-box and float property -->
+        <!-- <div class="navbar">
+        </div> -->
+
+    </section>
+
+    <script src="assets/js/navbar.js"></script>
+</body>
+</html>

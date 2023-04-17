@@ -1,0 +1,24 @@
+:root {
+ --mycolor: rgb(15, 207, 31);
+ --border: 2px solid red;
+}
+
+.body-color {
+    background-color: var(--mycolor);
+    border: var(--border);
+}
+
+.header-wrapper {
+    background: url("../images/bg.jpg");
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+}
+
+.icon-color {
+    color: purple;
+}
+
+.button-round {
+    border-radius: 30px;
+}

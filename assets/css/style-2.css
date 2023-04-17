@@ -1,0 +1,208 @@
+@import url('https://fonts.cdnfonts.com/css/poppins');
+@import url('https://fonts.cdnfonts.com/css/roboto');     
+
+:root {
+    --main-bg-color: #0022aa;
+    --secondary-bg-color: #faa60b;
+    --primary-color: #333;
+    --secondary-color: #fff;
+}
+
+body {
+    width: 100%;
+    font-family: "poppins";
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.header-wrapper {
+
+}
+
+.header-wrapper .navbar {
+    background-color: var(--main-bg-color);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 100px;
+    box-sizing: border-box;
+
+}
+
+.header-wrapper .navbar .logo {
+    color: var(--secondary-bg-color);
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.header-wrapper .navbar ul li {
+    list-style-type: none;
+    float: left;
+    padding: 5px 20px;
+}
+
+.header-wrapper .navbar ul li  a {
+    text-decoration: none;
+    color: var(--secondary-bg-color);
+}
+
+.header-wrapper .navbar .btn {
+    background-color: var(--secondary-bg-color);
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-wrapper .navbar .btn:hover {
+    opacity: 0.8;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+}
+
+.mobile-menu .nav-links {
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 1);
+    top: 0;
+    /* right: 0; */
+    left: -300px;
+    transition: 0.4s;
+    
+}
+
+.mobile-menu .nav-links ul {
+    width: 100%;
+    padding: 0px;
+}
+
+.mobile-menu .nav-links ul li {
+    width: inherit;
+    list-style-type: none;
+    padding: 10px 20px;
+    border-bottom: 2px solid #fff;
+
+}
+.mobile-menu .icon {
+    z-index: 1000;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.header-content {
+    background: url('../images/5-star-hotel-room-wallpaper-preview.jpg');
+    height: 80vh;
+    width: 100%;
+}
+
+/* media screen - mobile phone or device */
+@media screen and (max-width: 640px) {
+    
+.header-wrapper .navbar {
+    padding: 10px 20px;
+
+}
+
+.header-wrapper .navbar .links ul li {
+    display: none;
+}
+
+.header-wrapper .navbar .btn {
+   display: none;
+}
+
+.mobile-menu {
+    display: inline-flex;
+}
+
+}
+
+.form-area {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-area form {
+    min-width: 500px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.form-area form input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+@media screen and (max-width: 800px) {
+    .header-wrapper .navbar {
+        padding: 10px 20px;
+    }
+    
+    .header-wrapper .navbar .links ul li {
+        display: none;
+    }
+    
+    .header-wrapper .navbar .btn {
+       display: none;
+    }
+    
+    .mobile-menu {
+        display: inline-flex;
+    }
+}
+
+.add-color {
+    background-color: red;
+}
+
+.show {
+    display: block;
+}
+
+.show-flex {
+    display: flex;
+}
+
+.hide {
+    display: none;
+}

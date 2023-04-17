@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Responsiveness page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style-2.css">
+
+</head>
+<body>
+    
+    <section class="header-wrapper">
+
+        <!-- navbar area -->
+        <div class="navbar">
+            <div class="logo">Logo</div>
+            <div class="links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+            <div class="btn" onclick="showClass()">sign up</div>
+            <div class="mobile-menu">
+                <div class="icon" id="menu" onclick="toggleMyMenu('mobile-links')"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                <div class="nav-links" id="mobile-links">
+                    <div class="close-icon" onclick="toggleMyMenu('mobile-links')"><i class="fa fa-times" aria-hidden="true"></i></div>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- end of navbar -->
+
+        <div class="header-content">
+            <div class="caption" id="caption">Its Good to be Good</div>
+            <!-- <img id="myImage" src="assets/images/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg" alt=""> -->
+            <div class="sub-caption">Life is sweet when you have good people around you</div>
+            <div class="btn">Get started</div>
+
+            <a href="#" id="dynmicLink">my link</a>
+        </div>
+    </section>
+
+    <section class="form-area ano-cl btn" id="f-area">
+    
+        <form action="">
+            <h2>Enter your details</h2>
+            <input type="text" id="name" placeholder="full name" onchange="getNameInputKeys(event)">
+            <input type="password" id="password" placeholder="password" onkeyup="changeColor()">
+            <input type="password" id="password-2" placeholder="password">
+
+            <span style="color: red" id="error-msg"></span>
+
+            <input type="button" value="submit" id="submit-btn">
+        </form>
+    </section>
+
+
+    <script>
+
+        let imgArray = [
+            "life-resort-hotel-resort-hotel-wallpaper-preview.jpg",
+            "best-hotels-travel-thailand-tourism-wallpaper-preview.jpg",
+            "digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg",
+            "bg-2.jpg"
+        ]
+
+        function toggleMyMenu(myId) {
+            console.log("function works", myId);
+            let myMenuId = document.getElementById(myId);
+            if (myMenuId.style.display == "flex" || myMenuId.style.display == "block") {
+                myMenuId.style.display = "none";
+                myMenuId.style.left = "-300px";
+            }
+            else {
+                myMenuId.style.display = "flex"
+                myMenuId.style.left = 0;
+            }
+        }
+
+        function changeImage() {
+            let myImg = document.getElementById("myImage");
+            let i = 0;
+
+            setInterval(() => {
+                if(i >= imgArray.length ) {
+                    i = 0
+                }
+                console.log("index ", i);
+                myImg.setAttribute("src", "assets/images/" + imgArray[i]);
+                i++;
+            }, 2000);
+        }
+    
+       function getUserInputs() {
+        console.log("I show");
+            let name = document.getElementById("name").value;
+            let password_1 = document.getElementById("password").value;
+            let password_2 = document.getElementById("password-2").value;
+
+            if (password_1 !== password_2) {
+                document.getElementById("error-msg").innerHTML = "Password not match";
+            }
+            else {
+                document.getElementById("error-msg").innerHTML = "Password validated";
+                document.getElementById("error-msg").style.color = "green";
+            }
+
+            let telUser = "Your name has " +  name.length + " character";
+            alert(telUser);
+       }
+
+        let submitBTN =  document.getElementById("submit-btn");
+        submitBTN.addEventListener("click", getUserInputs);
+
+        const getNameInputKeys = (e) => {
+        let firstName;
+        let lastName;
+
+        let nameVal = document.getElementById("name").value;
+        console.log("input string length", nameVal.length);
+
+        if (nameVal.length === 10) {
+           alert("Account number is correct", nameVal) ;
+        }
+
+
+
+        // let nameVal = document.getElementById("name").value;
+        // let newVal = nameVal.trim().split(" ");
+        // console.log("pure array", newVal);
+        
+        // let filterArray = newVal.filter((value) => {
+        //     if (value !== " " && value !== null && value !== undefined) {
+        //         return value;
+        //     }
+        // });
+
+        // console.log("trimmed array", filterArray);
+        
+        // firstName = filterArray[0];
+        // lastName = filterArray[1];
+
+    }
+
+    const changeColor = () => {
+        console.log("I work");
+        let formArea = document.getElementById("f-area");
+        console.log(formArea.classList);
+        formArea.classList.add("hide");
+    }
+
+    const showClass = () => {
+        let formArea = document.getElementById("f-area");
+        console.log(formArea.classList);
+        formArea.classList.remove("hide");
+        formArea.classList.add("show");
+     }
+
+    
+
+    </script>
+</body>
+</html>
